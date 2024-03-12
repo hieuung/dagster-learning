@@ -1,0 +1,22 @@
+dagsterWebserver:
+  service:
+    type: LoadBalancer
+  workspace:
+    enabled: false
+    servers:
+      - host: "k8s-example-user-code-1"
+        port: 3030
+        name: "user-code-example"
+
+dagster-user-deployments:
+  enabled: true
+  deployments:
+    - name: "k8s-example-user-code-1"
+      image:
+        repository: "hieuung/dagster"
+        tag: v2
+        pullPolicy: Always
+      dagsterApiGrpcArgs:
+        - "--python-file"
+        - "/project/examples/main.py"
+      port: 3030
