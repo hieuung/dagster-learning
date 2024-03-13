@@ -31,7 +31,7 @@ jobs:
       - name: Build the Docker image
         uses: docker/build-push-action@v3
         with: 
-          context: .
+          context: ./
           push: true
           tags: hieuung/dagster:latest, hieuung/dagster:${{ github.run_number }}
 
