@@ -23,7 +23,7 @@ helm upgrade --install dagster dagster/dagster --namespace dagster --create-name
 
 Sample edited `values.yaml`
 ```yaml
-  dagsterWebserver:
+dagsterWebserver:
   service:
     type: LoadBalancer
   workspace:
@@ -53,3 +53,7 @@ dagster-user-deployments:
 ```sh
 helm upgrade -f values.yaml dagster dagster/dagster --namespace dagster
 ```
+
+# Pipeline Using Dagster
+
+> **_NOTE:_**  Read `readme` file in `/project` dicrectory.
