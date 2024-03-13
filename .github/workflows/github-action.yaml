@@ -24,12 +24,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Login Dockerhub
-        uses: docker/login-action@v1
+        uses: docker/login-action@v3
         with: 
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWROD }}
       - name: Build the Docker image
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v3
         with: 
           context: .
           push: true
