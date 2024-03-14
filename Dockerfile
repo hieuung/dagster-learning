@@ -12,5 +12,8 @@ RUN uv pip install \
     dagster-celery[flower,redis,kubernetes] \
     dagster-celery-k8s
 
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+
 # Get example pipelines
 COPY project/ project/
