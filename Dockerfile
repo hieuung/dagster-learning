@@ -13,7 +13,7 @@ RUN uv pip install \
     dagster-celery-k8s
 
 COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+RUN uv pip install -r requirements.txt
 
 # Get example pipelines
 COPY project/ project/
