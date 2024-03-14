@@ -1,3 +1,10 @@
-# CI with github action
+# DAGSTER LEARNING
 
-Build and push Docker image for user code to Dockerhub. (currently [my docker image](https://hub.docker.com/repository/docker/hieuung/dagster/general))
+## K8S deployment guide 
+[Readme file](./deployment/readme.md)
+
+## CI with github action
+[Readme file](/workflow/readme.md)
+
+## User workspace define
+[Readme file](./project/readme.md)
